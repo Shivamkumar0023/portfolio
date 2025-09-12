@@ -20,14 +20,14 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     html {scroll-behavior:smooth;}
     body {
-      background: linear-gradient(135deg, #0a0a4a, #000021); /* Gradient background */
+      background: linear-gradient(135deg, #0a0a4a, #000021);
       color:white;
       font-family:'Poppins',sans-serif;
       line-height:1.6;
       transition:0.3s;
     }
 
-    /* Dark/Light Mode Colors */
+    /* Light Mode */
     body.light {background:#f2f2f2;color:#111;}
     body.light nav {background:#00d4ff;}
     body.light .service-box, body.light .project-card {background:#cce7ff;color:#111;}
@@ -38,16 +38,15 @@
         height:80px;background:#0a0a4a;padding:0 50px;position:sticky;top:0;z-index:100;transition:0.3s;}
     nav .left{font-size:26px;font-weight:700;color:#00d4ff;}
     nav ul{display:flex;gap:25px;flex-wrap:wrap;}
-    nav ul li{list-style:none;cursor:pointer;font-weight:500;transition:.3s;}
-    nav ul li a{color:white;text-decoration:none;transition:0.3s;}
-    nav ul li a.active,
+    nav ul li{list-style:none;}
+    nav ul li a{color:white;text-decoration:none;font-weight:500;transition:0.3s;}
     nav ul li a:hover{color:#00d4ff;font-weight:700;text-decoration:underline;}
     #modeToggle {cursor:pointer;padding:8px 15px;border-radius:20px;border:none;background:#00d4ff;color:black;font-weight:600;transition:0.3s;}
     #modeToggle:hover {background:#00aacc;}
 
-    /* Hero Section */
+    /* Hero */
     .firstSection{display:flex;justify-content:space-between;align-items:center;
-        padding:80px 100px;min-height:90vh;transition:0.3s;flex-wrap:wrap;}
+        padding:80px 100px;min-height:90vh;flex-wrap:wrap;}
     .leftSection{flex:1;min-width:300px;}
     .leftSection h1{font-size:48px;line-height:1.3;}
     .leftSection h1 span{color:#00d4ff;}
@@ -57,45 +56,23 @@
     .rightSection{flex:1;min-width:300px;display:flex;justify-content:center;}
     .rightSection img{width:300px;border-radius:50%;border:5px solid #00d4ff;box-shadow:0 0 25px #00d4ff;}
 
-    /* Hero Social Icons */
+    /* Hero Social */
     .hero-social a{margin-right:15px;color:#00d4ff;font-size:24px;transition:0.3s;}
     .hero-social a:hover{color:#00aacc;transform:scale(1.2);}
 
     /* Sections */
     section{padding:80px 100px;}
     .section-title{text-align:center;font-size:32px;margin-bottom:40px;color:#00d4ff;}
-    
+
     /* About */
     .about p{max-width:800px;margin:auto;text-align:center;font-size:18px;color:#ccc;}
 
     /* Contact */
-    #contact form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    #contact input, #contact textarea {
-      padding: 12px;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      font-size: 16px;
-    }
-    #contact button {
-      padding: 12px;
-      border-radius: 25px;
-      background: #00d4ff;
-      border: none;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    #contact button:hover {
-      background: #00aacc;
-    }
+    #contact form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px;}
+    #contact input,#contact textarea{padding:12px;border:none;border-radius:8px;outline:none;font-size:16px;}
+    #contact button{padding:12px;background:#00d4ff;border:none;border-radius:8px;color:black;font-weight:600;cursor:pointer;transition:0.3s;}
+    #contact button:hover{background:#00aacc;}
+    #form-status{text-align:center;margin-top:15px;font-size:16px;display:none;}
   </style>
 </head>
 <body>
@@ -105,6 +82,7 @@
     <div class="left">Shivam</div>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button id="modeToggle">Toggle Mode</button>
@@ -114,11 +92,12 @@
   <section class="firstSection">
     <div class="leftSection">
       <h1>Hi, I'm <span>Shivam Kumar</span></h1>
-      <p>Web Developer | Java Developer | Full Stack Developer</p>
+      <p>I’m a Web Developer, Java Developer, and aspiring Full Stack Developer. Welcome to my portfolio!</p>
       <button class="btn">Hire Me</button>
       <div class="hero-social">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
         <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
     <div class="rightSection">
@@ -130,39 +109,55 @@
   <section id="about" class="about">
     <h2 class="section-title">About Me</h2>
     <p>
-      I am Shivam Kumar, passionate about building modern web and Java applications.
-      Skilled in Full Stack Development, I create efficient and scalable solutions.
+      I am Shivam Kumar, passionate about building modern and user-friendly applications. 
+      Skilled in Java, Web Development, and exploring Full Stack technologies to create impactful solutions.
     </p>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2 class="section-title">Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" name="user_name" placeholder="Your Name" required>
-      <input type="email" name="user_email" placeholder="Your Email" required>
+    <form id="contact-form" action="https://formspree.io/f/xkgvezvb" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+    <p id="form-status">✅ Thank you! Your message has been sent successfully.</p>
   </section>
 
-  <!-- EmailJS Script -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- Script -->
   <script>
-    (function(){
-      emailjs.init("iWfj0jkIH2YxrvVHr"); // 👈 apna EmailJS Public Key yaha daalo
-    })();
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
 
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      emailjs.sendForm('EmqiR3wZSS-1YouNDceWU', 'template_kqm2oug', this)
-        .then(() => {
-          alert("✅ Message sent successfully!");
-        }, (error) => {
-          alert("❌ Failed to send message: " + JSON.stringify(error));
-        });
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        status.style.display = "block";
+        status.style.color = "#00d4ff";
+        status.textContent = "✅ Thank you! Your message has been sent successfully.";
+        form.reset();
+      } else {
+        status.style.display = "block";
+        status.style.color = "red";
+        status.textContent = "❌ Oops! Something went wrong. Please try again.";
+      }
+    });
+
+    // Dark/Light mode toggle
+    const modeToggle = document.getElementById("modeToggle");
+    modeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("light");
     });
   </script>
 
 </body>
 </html>
+
