@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -30,28 +30,26 @@
     /* Light Mode */
     body.light {background:#f2f2f2;color:#111;}
     body.light nav {background:#00d4ff;}
-    body.light .service-box, body.light .project-card {background:#cce7ff;color:#111;}
     body.light footer {background:#00d4ff;color:#111;}
 
     /* Navbar */
     nav{display:flex;justify-content:space-between;align-items:center;
-        height:80px;background:#0a0a4a;padding:0 50px;position:sticky;top:0;z-index:100;transition:0.3s;}
+        height:80px;background:#0a0a4a;padding:0 50px;position:sticky;top:0;z-index:100;}
     nav .left{font-size:26px;font-weight:700;color:#00d4ff;}
-    nav ul{display:flex;gap:25px;flex-wrap:wrap;}
+    nav ul{display:flex;gap:25px;}
     nav ul li{list-style:none;}
     nav ul li a{color:white;text-decoration:none;font-weight:500;transition:0.3s;}
-    nav ul li a:hover{color:#00d4ff;font-weight:700;text-decoration:underline;}
-    #modeToggle {cursor:pointer;padding:8px 15px;border-radius:20px;border:none;background:#00d4ff;color:black;font-weight:600;transition:0.3s;}
-    #modeToggle:hover {background:#00aacc;}
+    nav ul li a:hover{color:#00d4ff;text-decoration:underline;}
+    #modeToggle {cursor:pointer;padding:8px 15px;border-radius:20px;border:none;background:#00d4ff;color:black;font-weight:600;}
 
     /* Hero */
     .firstSection{display:flex;justify-content:space-between;align-items:center;
         padding:80px 100px;min-height:90vh;flex-wrap:wrap;}
     .leftSection{flex:1;min-width:300px;}
-    .leftSection h1{font-size:48px;line-height:1.3;}
+    .leftSection h1{font-size:48px;}
     .leftSection h1 span{color:#00d4ff;}
     .leftSection p{margin:20px 0;font-size:18px;color:#dcdcdc;}
-    .btn{padding:12px 28px;background:#00d4ff;border:none;border-radius:25px;color:black;font-weight:600;cursor:pointer;transition:.3s;}
+    .btn{padding:12px 28px;background:#00d4ff;border:none;border-radius:25px;color:black;font-weight:600;cursor:pointer;}
     .btn:hover{background:#00aacc;}
     .rightSection{flex:1;min-width:300px;display:flex;justify-content:center;}
     .rightSection img{width:300px;border-radius:50%;border:5px solid #00d4ff;box-shadow:0 0 25px #00d4ff;}
@@ -64,15 +62,38 @@
     section{padding:80px 100px;}
     .section-title{text-align:center;font-size:32px;margin-bottom:40px;color:#00d4ff;}
 
-    /* About */
-    .about p{max-width:800px;margin:auto;text-align:center;font-size:18px;color:#ccc;}
-
     /* Contact */
-    #contact form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px;}
-    #contact input,#contact textarea{padding:12px;border:none;border-radius:8px;outline:none;font-size:16px;}
-    #contact button{padding:12px;background:#00d4ff;border:none;border-radius:8px;color:black;font-weight:600;cursor:pointer;transition:0.3s;}
-    #contact button:hover{background:#00aacc;}
-    #form-status{text-align:center;margin-top:15px;font-size:16px;display:none;}
+    #contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #contact input, #contact textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+    #contact button {
+      padding: 12px;
+      border-radius: 25px;
+      background: #00d4ff;
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #contact button:hover {background: #00aacc;}
+    #form-status {
+      text-align:center;
+      margin-top:15px;
+      font-size:16px;
+      display:none;
+    }
   </style>
 </head>
 <body>
@@ -82,7 +103,6 @@
     <div class="left">Shivam</div>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button id="modeToggle">Toggle Mode</button>
@@ -92,12 +112,11 @@
   <section class="firstSection">
     <div class="leftSection">
       <h1>Hi, I'm <span>Shivam Kumar</span></h1>
-      <p>I’m a Web Developer, Java Developer, and aspiring Full Stack Developer. Welcome to my portfolio!</p>
+      <p>Web Developer | Java Developer | Full Stack Developer</p>
       <button class="btn">Hire Me</button>
       <div class="hero-social">
-        <a href="#"><i class="fab fa-github"></i></a>
         <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
       </div>
     </div>
     <div class="rightSection">
@@ -109,8 +128,8 @@
   <section id="about" class="about">
     <h2 class="section-title">About Me</h2>
     <p>
-      I am Shivam Kumar, passionate about building modern and user-friendly applications. 
-      Skilled in Java, Web Development, and exploring Full Stack technologies to create impactful solutions.
+      I am Shivam Kumar, passionate about building modern web and Java applications.
+      Skilled in Full Stack Development, I create efficient and scalable solutions.
     </p>
   </section>
 
